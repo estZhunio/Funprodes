@@ -84,6 +84,10 @@ public class Socio implements Serializable{
 	@JoinColumn(name = "socio_id")
 	private List<Credito> creditos;
 	
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@JoinColumn(name = "socio_id")
+	private List<ReferenciasPersonales> refereciasPerson;
+	
 	
 	
 	/**

@@ -7,10 +7,11 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.UniqueConstraint;
 
-// Miguel Zhunio
+// Bryan Farez
 @Entity
-@Table(name = "referencias_personales")
+@Table(name = "referencias_personales", uniqueConstraints = {@UniqueConstraint(columnNames = {"socio_id"})})
 public class ReferenciasPersonales implements Serializable{
 	
 	@Id
