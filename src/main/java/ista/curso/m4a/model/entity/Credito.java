@@ -11,10 +11,11 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
+import jakarta.persistence.UniqueConstraint;
 
 // Miguel Zhunio
 @Entity
-@Table(name = "creditos")
+@Table(name = "creditos", uniqueConstraints = {@UniqueConstraint(columnNames = {"socio_id"})})
 public class Credito implements Serializable{
 	
 	@Id

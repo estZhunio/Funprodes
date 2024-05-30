@@ -10,7 +10,7 @@ import jakarta.persistence.Table;
 
 //bryan
 @Entity
-@Table(name = "empresa")
+@Table(name = "trabajo")
 public class Trabajo implements Serializable{
 
 	@Id

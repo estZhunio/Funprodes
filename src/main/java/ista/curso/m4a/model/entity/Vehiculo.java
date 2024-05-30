@@ -11,9 +11,10 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
+import jakarta.persistence.UniqueConstraint;
 
 @Entity
-@Table(name = "vehiculos")
+@Table(name = "vehiculos", uniqueConstraints = {@UniqueConstraint(columnNames = {"socio_id"})})
 public class Vehiculo implements Serializable {
 	
 	@Id

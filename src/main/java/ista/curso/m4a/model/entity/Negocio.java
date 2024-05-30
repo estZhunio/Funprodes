@@ -7,9 +7,10 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.UniqueConstraint;
 
 @Entity
-@Table(name = "negocios")
+@Table(name = "negocios",uniqueConstraints = {@UniqueConstraint(columnNames = {"socio_id"})})
 public class Negocio implements Serializable{
 
 	@Id
