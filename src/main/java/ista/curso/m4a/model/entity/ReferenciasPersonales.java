@@ -1,5 +1,7 @@
 package ista.curso.m4a.model.entity;
 
-public class ReferenciasPersonales {
+import java.io.Serializable;
+
+public class ReferenciasPersonales implements Serializable{
 
 }

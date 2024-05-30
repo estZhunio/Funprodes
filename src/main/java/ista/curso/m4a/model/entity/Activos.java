@@ -1,5 +1,7 @@
 package ista.curso.m4a.model.entity;
 
-public class Activos {
+import java.io.Serializable;
 
+public class Activos implements Serializable {
+	
 }
