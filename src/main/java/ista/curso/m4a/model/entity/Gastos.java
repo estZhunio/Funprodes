@@ -5,4 +5,9 @@ import java.io.Serializable;
 //bryan
 public class Gastos implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 }
