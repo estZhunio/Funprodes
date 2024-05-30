@@ -1,5 +1,8 @@
 package ista.curso.m4a.model.entity;
 
-public class Inmobiliarios {
+import java.io.Serializable;
+
+//bryan
+public class Inmobiliarios implements Serializable{
 
 }

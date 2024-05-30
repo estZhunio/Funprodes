@@ -1,5 +1,8 @@
 package ista.curso.m4a.model.entity;
 
-public class Conyugue {
+import java.io.Serializable;
+
+//bryan
+public class Conyugue implements Serializable{
 
 }
