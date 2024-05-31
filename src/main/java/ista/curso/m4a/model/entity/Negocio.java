@@ -31,7 +31,7 @@ public class Negocio implements Serializable{
 	private String direccion;
 	private String ruc;
 	private int numeroEmpleados;
-	private String localEs;
+	private String locales;
 	private String institucion;
 	private int numeroCasa;
 	private String telefono;
@@ -177,13 +177,13 @@ public class Negocio implements Serializable{
 	}
 
 
-	public String getLocalEs() {
-		return localEs;
+	public String getLocales() {
+		return locales;
 	}
 
 
-	public void setLocalEs(String localEs) {
-		this.localEs = localEs;
+	public void setLocales(String locales) {
+		this.locales = locales;
 	}
 
 

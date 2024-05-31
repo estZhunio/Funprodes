@@ -13,6 +13,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
@@ -51,7 +52,7 @@ public class Socio implements Serializable{
 	@Column(name="fecha_nacimiento")
 	@Temporal(TemporalType.DATE)
 	private Date fechaNacimiento;
-	
+		
 	private String direccion;
 	private String ciudad;
 	private String referencia;
@@ -59,7 +60,7 @@ public class Socio implements Serializable{
 	private String propietario;
 	private String telefonoPropietario;
 	private String estadoCivil;
-	private String personasIndependientes;
+	private int personasDependientes;
 	private String parroquia;
 	private String telefono;
 	
@@ -95,6 +96,10 @@ public class Socio implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 
+	@PrePersist
+	public void prePersist() {
+		fechaNacimiento = new Date();
+	}
 
 	public Long getId() {
 		return id;
@@ -316,13 +321,13 @@ public class Socio implements Serializable{
 	}
 
 
-	public String getPersonasIndependientes() {
-		return personasIndependientes;
+	public int getPersonasDependientes() {
+		return personasDependientes;
 	}
 
 
-	public void setPersonasIndependientes(String personasIndependientes) {
-		this.personasIndependientes = personasIndependientes;
+	public void setPersonasDependientes(int personasDependientes) {
+		this.personasDependientes = personasDependientes;
 	}
 
 
