@@ -6,6 +6,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 //bryan
@@ -28,6 +30,10 @@ public class Gastos implements Serializable {
 	private double transporte;
 	private double otrosEgresos;
 	private double totalGastos;
+	
+	@OneToOne
+	@JoinColumn(name = "socio_id", referencedColumnName = "id")
+	private Socio socio;
 	
 	
 	public Long getId() {

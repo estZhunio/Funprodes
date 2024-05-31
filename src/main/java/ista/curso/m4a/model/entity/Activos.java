@@ -2,10 +2,13 @@ package ista.curso.m4a.model.entity;
 
 import java.io.Serializable;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 // Miguel Zhunio
@@ -29,6 +32,9 @@ public class Activos implements Serializable {
 	private double bienes_inmuebles;
 	private double total;
 	
+	@OneToOne
+	@JoinColumn(name = "socio_id", referencedColumnName = "id")
+	private Socio socio;
 	
 
 	public Long getId() {
