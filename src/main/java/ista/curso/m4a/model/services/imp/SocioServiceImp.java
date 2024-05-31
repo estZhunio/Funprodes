@@ -3,12 +3,13 @@ package ista.curso.m4a.model.services.imp;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import ista.curso.m4a.model.dao.ISocioDao;
 import ista.curso.m4a.model.entity.Socio;
 import ista.curso.m4a.model.services.ISocioService;
-
+@Service
 public class SocioServiceImp implements ISocioService{
 	
 	@Autowired
