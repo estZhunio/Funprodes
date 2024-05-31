@@ -18,8 +18,7 @@ public class NegocioServiceImp implements INegocioService{
 
 	@Override
 	@Transactional(readOnly = true)
-	public List<Negocio> finAll() {
-		// TODO Auto-generated method stub
+	public List<Negocio> findAll() {
 		return (List<Negocio>) negocioDao.findAll();
 	}
 
