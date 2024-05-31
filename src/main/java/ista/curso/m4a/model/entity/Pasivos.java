@@ -2,7 +2,6 @@ package ista.curso.m4a.model.entity;
 
 import java.io.Serializable;
 
-import com.fasterxml.jackson.core.sym.Name;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
