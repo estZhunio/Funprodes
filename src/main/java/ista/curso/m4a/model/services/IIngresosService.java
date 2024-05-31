@@ -9,5 +9,5 @@ public interface IIngresosService {
 	public List<Ingresos> findAll();
 	public Ingresos save(Ingresos ingreso);
 	public Ingresos findById(Long id);
-	public void delete();
+	public void delete(Long id);
 }

@@ -10,6 +10,6 @@ public interface ICreditoService {
 	public List<Credito> findAll();
 	public Credito save(Credito credito);
 	public Credito findById(Long id);
-	public void delete();
+	public void delete(Long id);
 
 }

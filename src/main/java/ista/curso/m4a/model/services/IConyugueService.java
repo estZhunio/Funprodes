@@ -9,5 +9,5 @@ public interface IConyugueService {
 	public List<Conyugue> findAll();
 	public Conyugue save(Conyugue conyugue);
 	public Conyugue findById(Long id);
-	public void delete();
+	public void delete(Long id);
 }

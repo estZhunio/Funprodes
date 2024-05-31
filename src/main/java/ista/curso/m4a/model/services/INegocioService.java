@@ -8,5 +8,5 @@ public interface INegocioService {
 	public List<Negocio> finAll();
 	public Negocio save(Negocio negocio);
 	public Negocio findById(Long id);
-	public void delete();
+	public void delete(Long id);
 }

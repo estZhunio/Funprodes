@@ -8,5 +8,5 @@ public interface IPasivosService {
 	public List<Pasivos> findAll();
 	public Pasivos save(Pasivos pasivo);
 	public Pasivos findById(Long id);
-	public void delete();
+	public void delete(Long id);
 }

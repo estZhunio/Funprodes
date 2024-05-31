@@ -9,5 +9,5 @@ public interface IInmobiliariosService {
 	public List<Inmobiliarios> findAll();
 	public Inmobiliarios save(Inmobiliarios inmobiliario);
 	public Inmobiliarios findById(Long id);
-	public void delete();
+	public void delete(Long id);
 }

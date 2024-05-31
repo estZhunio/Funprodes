@@ -8,5 +8,5 @@ public interface ISocioService {
 	public List<Socio> findAll();
 	public Socio save(Socio socio);
 	public Socio findById(Long id);
-	public void delete();
+	public void delete(Long id);
 }

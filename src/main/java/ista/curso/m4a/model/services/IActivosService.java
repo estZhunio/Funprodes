@@ -8,5 +8,5 @@ public interface IActivosService {
 	public List<Activos> findAll();
 	public Activos save(Activos activo);
 	public Activos findById(Long id);
-	public void delete();
+	public void delete(Long id);
 }

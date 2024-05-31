@@ -8,5 +8,5 @@ public interface IReferenciasPersonalesService {
 	public List<ReferenciasPersonales> findAll();
 	public ReferenciasPersonales save(ReferenciasPersonales referenciaPersonal);
 	public ReferenciasPersonales findById(Long id);
-	public void delete();
+	public void delete(Long id);
 }

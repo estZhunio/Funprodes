@@ -8,5 +8,5 @@ public interface ITrabajoService {
 	public List<Trabajo> findAll();
 	public Trabajo save(Trabajo trabajo);
 	public Trabajo findById(Long id);
-	public void delete();
+	public void delete(Long id);
 }

@@ -9,5 +9,5 @@ public interface IGastosService {
 	public List<Gastos> findAll();
 	public Gastos save(Gastos gasto);
 	public Gastos findById(Long id);
-	public void delete();
+	public void delete(Long id);
 }
