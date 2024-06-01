@@ -19,7 +19,7 @@ import ista.curso.m4a.model.services.IActivosService;
 
 @RestController
 @RequestMapping("/api")
-public class ActivosRestController {
+public class ActivoRestController {
 
 	@Autowired
 	private IActivosService activoService;
