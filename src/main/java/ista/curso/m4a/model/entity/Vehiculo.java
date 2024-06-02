@@ -31,6 +31,7 @@ public class Vehiculo implements Serializable {
 	@Column(unique = true)
 	private String numeroPlaca;
 	
+	private String socio_id;// FK
 	
 	
 	
@@ -113,6 +114,20 @@ public class Vehiculo implements Serializable {
 
 	public void setNumeroPlaca(String numeroPlaca) {
 		this.numeroPlaca = numeroPlaca;
+	}
+
+
+
+
+	public String getSocio_id() {
+		return socio_id;
+	}
+
+
+
+
+	public void setSocio_id(String socio_id) {
+		this.socio_id = socio_id;
 	}
 
 

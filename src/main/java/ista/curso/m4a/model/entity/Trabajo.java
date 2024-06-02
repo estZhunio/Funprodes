@@ -26,6 +26,7 @@ public class Trabajo implements Serializable{
 	private String telefono;
 	private int aniosTrabajados;
 	
+	
 	@OneToOne
 	@JoinColumn(name = "socio_id", referencedColumnName = "id")
 	private Socio socio;
@@ -33,6 +34,18 @@ public class Trabajo implements Serializable{
 	
 	
 	
+	public Socio getSocio() {
+		return socio;
+	}
+
+
+
+	public void setSocio(Socio socio) {
+		this.socio = socio;
+	}
+
+
+
 	public Long getId() {
 		return id;
 	}

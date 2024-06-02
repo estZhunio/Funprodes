@@ -34,6 +34,7 @@ public class Credito implements Serializable{
 	private String estado;
 	private String formaPago;
 	private String inversion;
+	private String socio_id;// FK
 	
 	
 	
@@ -192,6 +193,22 @@ public class Credito implements Serializable{
 
 	public void setInversion(String inversion) {
 		this.inversion = inversion;
+	}
+
+
+
+
+
+	public String getSocio_id() {
+		return socio_id;
+	}
+
+
+
+
+
+	public void setSocio_id(String socio_id) {
+		this.socio_id = socio_id;
 	}
 
 

@@ -23,7 +23,7 @@ public class Inmobiliarios implements Serializable{
 	private double valor;
 	private Boolean hipotecado;
 	private String institucion;
-	
+	private String socio_id;//FK
 	
 	public Long getId() {
 		return id;
@@ -83,6 +83,16 @@ public class Inmobiliarios implements Serializable{
 	public void setInstitucion(String institucion) {
 		this.institucion = institucion;
 	}
+
+	public String getSocio_id() {
+		return socio_id;
+	}
+
+
+	public void setSocio_id(String socio_id) {
+		this.socio_id = socio_id;
+	}
+
 
 
 	/**

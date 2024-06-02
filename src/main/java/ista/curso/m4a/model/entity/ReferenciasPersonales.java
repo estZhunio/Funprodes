@@ -24,7 +24,7 @@ public class ReferenciasPersonales implements Serializable{
 	private String telefono;
 	private String parentesco;
 	private boolean confirmacion;
-	
+	private String socio_id; //FK
 	
 
 	public Long getId() {
@@ -108,6 +108,18 @@ public class ReferenciasPersonales implements Serializable{
 	public void setConfirmacion(boolean confirmacion) {
 		this.confirmacion = confirmacion;
 	}
+
+
+	public String getSocio_id() {
+		return socio_id;
+	}
+
+
+
+	public void setSocio_id(String socio_id) {
+		this.socio_id = socio_id;
+	}
+
 
 
 

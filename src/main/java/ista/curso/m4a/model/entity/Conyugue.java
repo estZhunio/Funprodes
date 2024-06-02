@@ -39,7 +39,7 @@ public class Conyugue implements Serializable{
 	@Temporal(TemporalType.DATE)
 	private Date fechaNacimiento;
 	
-
+	private String socio_id;// FK
 	
 	/**
 	 * 
@@ -146,4 +146,15 @@ public class Conyugue implements Serializable{
 		this.fechaNacimiento = fechaNacimiento;
 	}
 
+
+	public String getSocio_id() {
+		return socio_id;
+	}
+
+
+	public void setSocio_id(String socio_id) {
+		this.socio_id = socio_id;
+	}
+
+	
 }
