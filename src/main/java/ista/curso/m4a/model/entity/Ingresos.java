@@ -146,7 +146,8 @@ public class Ingresos implements Serializable {
 
 
 	public double getTotalIngresos() {
-		return totalIngresos;
+		return sueldo + sueldoConyugue + comercio + agricultura + ganaderia +
+	               arriendos + alquilerVehiculos + pensiones + intereses + otrosIngresos;
 	}
 
 
@@ -162,8 +163,11 @@ public class Ingresos implements Serializable {
 	}
 
 
-	public void setSocio(Socio socio) {
-		this.socio = socio;
+	public void setSocio(Long socioId) {
+		if (this.socio == null) {
+	        this.socio = new Socio(); // Si socio es null, crea un nuevo objeto Socio
+	    }
+	    this.socio.setId(socioId); // Establece el ID del socio
 	}
 
 

@@ -147,7 +147,8 @@ public class Gastos implements Serializable {
 
 
 	public double getTotalGastos() {
-		return totalGastos;
+		return alimentacion + arriendo + serviciosBasico + educacion + salud +
+	               deudas + vestimenta + pensiones + transporte + otrosEgresos;
 	}
 
 
@@ -162,8 +163,11 @@ public class Gastos implements Serializable {
 	}
 
 
-	public void setSocio(Socio socio) {
-		this.socio = socio;
+	public void setSocio(Long socioId) {
+		if (this.socio == null) {
+	        this.socio = new Socio(); // Si socio es null, crea un nuevo objeto Socio
+	    }
+	    this.socio.setId(socioId); // Establece el ID del socio
 	}
 
 

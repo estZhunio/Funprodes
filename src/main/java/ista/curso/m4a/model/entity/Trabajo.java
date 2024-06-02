@@ -42,6 +42,13 @@ public class Trabajo implements Serializable{
 	public void setSocio(Socio socio) {
 		this.socio = socio;
 	}
+	
+	public void setSocio(Long socioId) {
+		if (this.socio == null) {
+	        this.socio = new Socio(); // Si socio es null, crea un nuevo objeto Socio
+	    }
+	    this.socio.setId(socioId); // Establece el ID del socio
+	}
 
 
 

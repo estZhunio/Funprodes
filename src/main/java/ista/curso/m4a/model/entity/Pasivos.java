@@ -164,7 +164,8 @@ public class Pasivos implements Serializable{
 
 
 	public double getTotal_pasivos() {
-		return total_pasivos;
+		return deudas_cooperativas + deudas_banco + deudas_proovedores + deudas_tarjetas_credito +
+		           deudas_almacenes + deudas_otras;
 	}
 
 
@@ -218,12 +219,17 @@ public class Pasivos implements Serializable{
 
 
 
-	public Long getSocioId() {
+	public Long getSocio() {
 	    return socio.getId();
 	}
 
 
-
+	public void setSocio(Long socioId) {
+		if (this.socio == null) {
+	        this.socio = new Socio(); // Si socio es null, crea un nuevo objeto Socio
+	    }
+	    this.socio.setId(socioId); // Establece el ID del socio
+	}
 
 
 

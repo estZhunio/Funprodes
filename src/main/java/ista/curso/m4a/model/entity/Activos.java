@@ -35,6 +35,7 @@ public class Activos implements Serializable {
 	@JoinColumn(name = "socio_id", referencedColumnName = "id")
 	private Socio socio;
 	
+	
 
 	public Long getId() {
 		return id;
@@ -213,15 +214,11 @@ public class Activos implements Serializable {
 
 
 	public double getTotal() {
-		return total;
-	}
-
-
-
-
-
-	public void setTotal(double total) {
-		this.total = total;
+		      
+		return efectivo + depositos_financieros + cuentas_cobrar + inventario_mercaderia +
+				inversion_cultivos + inversion_ganado + muebles + herramientas_maquinaria +
+	            vehiculos + bienes_inmuebles;
+	   
 	}
 
 
@@ -231,10 +228,11 @@ public class Activos implements Serializable {
 
 
 
-
-
-	public void setSocio(Socio socio) {
-		this.socio = socio;
+	public void setSocio(Long socioId) {
+		if (this.socio == null) {
+	        this.socio = new Socio(); // Si socio es null, crea un nuevo objeto Socio
+	    }
+	    this.socio.setId(socioId); // Establece el ID del socio
 	}
 
 
