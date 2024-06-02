@@ -30,3 +30,22 @@ INSERT INTO `vehiculos` (`anio_fabricacion`, `valor`, `id`, `socio_id`, `marca`,
 INSERT INTO `vehiculos` (`anio_fabricacion`, `valor`, `id`, `socio_id`, `marca`, `numero_placa`, `tipo_vehiculo`) VALUES ('1990-06-20', '8200', NULL, '2', 'Toyota', 'AP-000074', 'Automovil');
 INSERT INTO `vehiculos` (`anio_fabricacion`, `valor`, `id`, `socio_id`, `marca`, `numero_placa`, `tipo_vehiculo`) VALUES ('2010-06-20', '9200', NULL, '3', 'Hyundai', 'TAP-000054', 'Automovil');
 INSERT INTO `vehiculos` (`anio_fabricacion`, `valor`, `id`, `socio_id`, `marca`, `numero_placa`, `tipo_vehiculo`) VALUES ('2009-06-20', '7200', NULL, '4', 'Nissan', 'AP-000216', 'Automovil');
+
+
+-- Datos Negocio
+INSERT INTO `negocios`(`antiguedad`, `hipotecado`, `numero_casa`, `numero_empleados`, `tiempo_local`, `socio_id`, `actividad`, `actividad_negocio`, `cuidad`, `direccion`, `institucion`, `locales`, `lugar_ventas`, `razon_social`, `referencia`, `ruc`, `subactividad`, `telefono`) VALUES (4 ,false ,345 ,10 ,6 ,1 ,'Vetna y compra de ropa','venta de ropa','Cuenca','Calle larga/Fabian Alarcon','N/A','Ninguno','Parque historico','Baratismo','Cerca del paque Calderón','11111','Compra de ropa usada','222-45-67');
+INSERT INTO `negocios`(`antiguedad`, `hipotecado`, `numero_casa`, `numero_empleados`, `tiempo_local`, `socio_id`, `actividad`, `actividad_negocio`, `cuidad`, `direccion`, `institucion`, `locales`, `lugar_ventas`, `razon_social`, `referencia`, `ruc`, `subactividad`, `telefono`) VALUES (1 ,true ,265 ,5 ,4 ,2 ,'Prestacion de servicios de internet','Servicios de internet','Machala','Juan Maldonado/Jep','BanEcuador','Ninguno','Parque de la Madre','InterPlus','Al frenete del Shopping','567896','Ninguna','123-567-86');
+INSERT INTO `negocios`(`antiguedad`, `hipotecado`, `numero_casa`, `numero_empleados`, `tiempo_local`, `socio_id`, `actividad`, `actividad_negocio`, `cuidad`, `direccion`, `institucion`, `locales`, `lugar_ventas`, `razon_social`, `referencia`, `ruc`, `subactividad`, `telefono`) VALUES (3 ,false ,674 ,1 ,2 ,3 ,'Venta de perfumes','Vetna de perfumes Avon','Santa Rosa','10 de agosto/Calderon','N/A','Ninguno','Subcentro deL tho','Bellaza Yess','Cerca del parque de la Madre','7890r','Venta de cosmeticos','730-11-79');
+
+-- Datos de Activos
+INSERT INTO `activos`(`bienes_inmuebles`, `cuentas_cobrar`, `depositos_financieros`, `efectivo`, `herramientas_maquinaria`, `inventario_mercaderia`, `inversion_cultivos`, `inversion_ganado`, `muebles`, `total`, `vehiculos`, `socio_id`) VALUES (1000.00, 1000.00, 2000.00, 5000.00, 30000.00, 0.0, 2000.00, 0.0,800.00, 20000.00 ,5200.00,1);
+INSERT INTO `activos`(`bienes_inmuebles`, `cuentas_cobrar`, `depositos_financieros`, `efectivo`, `herramientas_maquinaria`, `inventario_mercaderia`, `inversion_cultivos`, `inversion_ganado`, `muebles`, `total`, `vehiculos`, `socio_id`) VALUES (1000.00, 1000.00, 2000.00, 5000.00, 30000.00, 0.0, 1000.00, 0.0,800.00, 22000.00 ,8200.00,2);
+INSERT INTO `activos`(`bienes_inmuebles`, `cuentas_cobrar`, `depositos_financieros`, `efectivo`, `herramientas_maquinaria`, `inventario_mercaderia`, `inversion_cultivos`, `inversion_ganado`, `muebles`, `total`, `vehiculos`, `socio_id`) VALUES (1000.00, 1000.00, 2000.00, 1000.00, 20000.00, 0.0, 2000.00, 0.0,800.00, 19000.00 ,9200.00,3);
+
+
+-- Datos de Pasivos
+INSERT INTO `pasivos`(`deudas_almacenes`, `deudas_banco`, `deudas_cooperativas`, `deudas_otras`, `deudas_proovedores`, `deudas_tarjetas_credito`, `patromonio`, `total`, `total_pasivos`, `socio_id`) VALUES (1000.00, 1000.00, 0.0, 500.00, 500.00, 0.0,17000.00, 20000.00,3000.00,1);
+INSERT INTO `pasivos`(`deudas_almacenes`, `deudas_banco`, `deudas_cooperativas`, `deudas_otras`, `deudas_proovedores`, `deudas_tarjetas_credito`, `patromonio`, `total`, `total_pasivos`, `socio_id`) VALUES (1000.00, 1000.00, 0.0, 1000.00, 1000.00, 0.0, 18000.00, 22000.00,4000.00,2);
+INSERT INTO `pasivos`(`deudas_almacenes`, `deudas_banco`, `deudas_cooperativas`, `deudas_otras`, `deudas_proovedores`, `deudas_tarjetas_credito`, `patromonio`, `total`, `total_pasivos`, `socio_id`) VALUES (1000.00, 1000.00, 0.0, 5000.00, 0.0, 0.0,12000.00, 19000.00,7000.00,3);
+
+
