@@ -225,7 +225,17 @@ public class Activos implements Serializable {
 	}
 
 
+	public Long getSocio() {
+		return socio.getId();
+	}
 
+
+
+
+
+	public void setSocio(Socio socio) {
+		this.socio = socio;
+	}
 
 
 	/**

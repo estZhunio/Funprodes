@@ -155,6 +155,18 @@ public class Gastos implements Serializable {
 		this.totalGastos = totalGastos;
 	}
 
+	
+
+	public Long getSocio() {
+		return socio.getId();
+	}
+
+
+	public void setSocio(Socio socio) {
+		this.socio = socio;
+	}
+
+
 
 	/**
 	 * 

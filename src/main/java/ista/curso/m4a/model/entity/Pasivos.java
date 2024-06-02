@@ -36,8 +36,6 @@ public class Pasivos implements Serializable{
 	@JoinColumn(name = "socio_id", referencedColumnName = "id")
 	private Socio socio;
 	
-	
-	
 
 	public Long getId() {
 		return id;
@@ -213,6 +211,18 @@ public class Pasivos implements Serializable{
 	public void setTotal(double total) {
 		this.total = total;
 	}
+
+	
+
+
+
+
+
+	public Long getSocioId() {
+	    return socio.getId();
+	}
+
+
 
 
 

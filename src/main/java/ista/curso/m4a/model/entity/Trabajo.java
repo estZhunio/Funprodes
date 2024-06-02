@@ -1,4 +1,4 @@
-package ista.curso.m4a.model.entity;
+	package ista.curso.m4a.model.entity;
 
 import java.io.Serializable;
 
@@ -33,9 +33,8 @@ public class Trabajo implements Serializable{
 	
 	
 	
-	
-	public Socio getSocio() {
-		return socio;
+	public Long getSocio() {
+		return socio.getId();
 	}
 
 

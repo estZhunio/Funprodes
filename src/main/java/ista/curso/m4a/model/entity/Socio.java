@@ -13,6 +13,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
@@ -89,6 +90,21 @@ public class Socio implements Serializable{
 	@JoinColumn(name = "socio_id")
 	private List<ReferenciasPersonales> refereciasPerson;
 	
+	
+	@OneToOne(mappedBy = "socio", cascade = CascadeType.ALL)
+	private Pasivos pasivo;
+	
+	@OneToOne(mappedBy = "socio", cascade = CascadeType.ALL)
+	private Trabajo trabajo;
+	
+	@OneToOne(mappedBy = "socio", cascade = CascadeType.ALL)
+	private Activos activo;
+	
+	@OneToOne(mappedBy = "socio", cascade = CascadeType.ALL)
+	private Gastos gastos;
+	
+	@OneToOne(mappedBy = "socio", cascade = CascadeType.ALL)
+	private Ingresos ingreso;
 	
 	
 	/**
@@ -349,6 +365,98 @@ public class Socio implements Serializable{
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
+
+	public List<Conyugue> getConyugues() {
+		return conyugues;
+	}
+
+	public void setConyugues(List<Conyugue> conyugues) {
+		this.conyugues = conyugues;
+	}
+
+	public List<Negocio> getNegocio() {
+		return negocio;
+	}
+
+	public void setNegocio(List<Negocio> negocio) {
+		this.negocio = negocio;
+	}
+
+	public List<Inmobiliarios> getInmobiliarios() {
+		return inmobiliarios;
+	}
+
+	public void setInmobiliarios(List<Inmobiliarios> inmobiliarios) {
+		this.inmobiliarios = inmobiliarios;
+	}
+
+	public List<Vehiculo> getVehiculos() {
+		return vehiculos;
+	}
+
+	public void setVehiculos(List<Vehiculo> vehiculos) {
+		this.vehiculos = vehiculos;
+	}
+	
+	public List<Credito> getCreditos() {
+		return creditos;
+	}
+
+	public void setCreditos(List<Credito> creditos) {
+		this.creditos = creditos;
+	}
+
+	public List<ReferenciasPersonales> getRefereciasPerson() {
+		return refereciasPerson;
+	}
+
+	public void setRefereciasPerson(List<ReferenciasPersonales> refereciasPerson) {
+		this.refereciasPerson = refereciasPerson;
+	}
+
+	public Pasivos getPasivo() {
+		return pasivo;
+	}
+
+	public void setPasivo(Pasivos pasivo) {
+		this.pasivo = pasivo;
+	}
+
+	public Trabajo getTrabajo() {
+		return trabajo;
+	}
+
+	public void setTrabajo(Trabajo trabajo) {
+		this.trabajo = trabajo;
+	}
+
+	public Activos getActivo() {
+		return activo;
+	}
+
+	public void setActivo(Activos activo) {
+		this.activo = activo;
+	}
+
+	public Gastos getGastos() {
+		return gastos;
+	}
+
+	public void setGastos(Gastos gastos) {
+		this.gastos = gastos;
+	}
+
+	public Ingresos getIngreso() {
+		return ingreso;
+	}
+
+	public void setIngreso(Ingresos ingreso) {
+		this.ingreso = ingreso;
+	}
+	
+	
+	
+
 	
 
 }

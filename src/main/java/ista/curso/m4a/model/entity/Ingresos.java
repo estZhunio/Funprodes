@@ -153,6 +153,20 @@ public class Ingresos implements Serializable {
 	public void setTotalIngresos(double totalIngresos) {
 		this.totalIngresos = totalIngresos;
 	}
+	
+	
+
+
+	public Long getSocio() {
+		return socio.getId();
+	}
+
+
+	public void setSocio(Socio socio) {
+		this.socio = socio;
+	}
+
+
 
 
 	/**
