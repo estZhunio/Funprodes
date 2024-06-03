@@ -55,7 +55,7 @@ public class ActivoRestController {
 		activoActual.setHerramientas_maquinaria(activos.getHerramientas_maquinaria());
 		activoActual.setVehiculos(activos.getVehiculos());
 		activoActual.setBienes_inmuebles(activos.getBienes_inmuebles());
-		
+		activoActual.setTotal(activos.getTotal());
 		
 		return activoService.save(activoActual);
 		

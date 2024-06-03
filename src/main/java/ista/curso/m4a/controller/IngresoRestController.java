@@ -55,7 +55,7 @@ public class IngresoRestController {
 		ingresoActual.setIntereses(ingreso.getIntereses());
 		ingresoActual.setPensiones(ingreso.getPensiones());
 		ingresoActual.setOtrosIngresos(ingreso.getOtrosIngresos());
-
+		ingresoActual.setTotalIngresos(ingreso.getTotalIngresos());
 		
 		
 		return ingresoService.save(ingresoActual);

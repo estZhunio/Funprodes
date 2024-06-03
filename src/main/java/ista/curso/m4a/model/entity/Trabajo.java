@@ -2,6 +2,7 @@
 
 import java.io.Serializable;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -27,7 +28,7 @@ public class Trabajo implements Serializable{
 	private int aniosTrabajados;
 	
 	
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "socio_id", referencedColumnName = "id")
 	private Socio socio;
 	
@@ -37,11 +38,6 @@ public class Trabajo implements Serializable{
 		return socio.getId();
 	}
 
-
-
-	public void setSocio(Socio socio) {
-		this.socio = socio;
-	}
 	
 	public void setSocio(Long socioId) {
 		if (this.socio == null) {

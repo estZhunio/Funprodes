@@ -94,6 +94,7 @@ public class Socio implements Serializable{
 	@OneToOne(mappedBy = "socio", cascade = CascadeType.ALL)
 	private Pasivos pasivo;
 	
+	
 	@OneToOne(mappedBy = "socio", cascade = CascadeType.ALL)
 	private Trabajo trabajo;
 	
@@ -455,8 +456,4 @@ public class Socio implements Serializable{
 	}
 	
 	
-	
-
-	
-
 }

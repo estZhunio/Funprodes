@@ -51,6 +51,7 @@ public class PasivoRestController {
 		pasivoActual.setDeudas_tarjetas_credito(pasivo.getDeudas_tarjetas_credito());
 		pasivoActual.setDeudas_almacenes(pasivo.getDeudas_almacenes());
 		pasivoActual.setDeudas_otras(pasivo.getDeudas_otras());
+		pasivoActual.setTotal_pasivos(pasivo.getTotal_pasivos());
 		
 		
 		return pasivoService.save(pasivoActual);

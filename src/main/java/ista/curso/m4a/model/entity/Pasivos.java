@@ -2,7 +2,7 @@ package ista.curso.m4a.model.entity;
 
 import java.io.Serializable;
 
-
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -32,7 +32,7 @@ public class Pasivos implements Serializable{
 	private double patromonio;
 	private double total;
 	
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "socio_id", referencedColumnName = "id")
 	private Socio socio;
 	
@@ -43,14 +43,9 @@ public class Pasivos implements Serializable{
 
 
 
-
-
-
 	public void setId(Long id) {
 		this.id = id;
 	}
-
-
 
 
 

@@ -55,6 +55,7 @@ public class GastoRestController {
 		gastoActual.setPensiones(gasto.getPensiones());
 		gastoActual.setTransporte(gasto.getTransporte());
 		gastoActual.setOtrosEgresos(gasto.getOtrosEgresos());
+		gastoActual.setTotalGastos(gasto.getTotalGastos());
 
 		return gastoService.save(gastoActual);
 		

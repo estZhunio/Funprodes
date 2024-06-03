@@ -2,6 +2,7 @@ package ista.curso.m4a.model.entity;
 
 import java.io.Serializable;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -31,7 +32,7 @@ public class Gastos implements Serializable {
 	private double otrosEgresos;
 	private double totalGastos;
 	
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "socio_id", referencedColumnName = "id")
 	private Socio socio;
 	
@@ -150,10 +151,12 @@ public class Gastos implements Serializable {
 		return alimentacion + arriendo + serviciosBasico + educacion + salud +
 	               deudas + vestimenta + pensiones + transporte + otrosEgresos;
 	}
+	
+	
 
 
 	public void setTotalGastos(double totalGastos) {
-		this.totalGastos = totalGastos;
+		this.totalGastos = getTotalGastos();
 	}
 
 	

@@ -35,8 +35,19 @@ public class Negocio implements Serializable{
 	private String institucion;
 	private int numeroCasa;
 	private String telefono;
+	private String socio_id;//FK
 	
 	
+	public String getSocio_id() {
+		return socio_id;
+	}
+
+
+	public void setSocio_id(String socio_id) {
+		this.socio_id = socio_id;
+	}
+
+
 	public Long getId() {
 		return id;
 	}
